@@ -5,19 +5,21 @@
   "main": "main.ts",
   "scripts": {
     "start": "tsc; node dist/main.js",
-    "serve": "tsnd --respawn --no-notify --transpile-only src/main.ts"  
+    "serve": "tsnd --respawn --no-notify --transpile-only src/main.ts"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/hmaravlad/simple-password-generator.git"
   },
   "author": "",
+  "type": "module",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/hmaravlad/simple-password-generator/issues"
   },
   "homepage": "https://github.com/hmaravlad/simple-password-generator#readme",
   "dependencies": {
+    "@types/node": "^16.11.6",
     "eslint": "^7.32.0",
     "eslint-plugin-import": "^2.25.2",
     "install": "^0.13.0",
