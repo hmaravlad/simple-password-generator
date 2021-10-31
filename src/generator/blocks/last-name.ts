@@ -16,8 +16,6 @@ export class LastNameBlock implements Block {
   }
 
   generate(): string {
-    let lastName = chooseRandom(this.lastNames);
-    lastName = lastName[0].toUpperCase() + lastName.slice(1);
-    return lastName;
+    return chooseRandom(this.lastNames);
   }
 }

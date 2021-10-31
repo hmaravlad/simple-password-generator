@@ -16,8 +16,6 @@ export class NameBlock implements Block {
   }
 
   generate(): string {
-    let name = chooseRandom(this.names);
-    name = name[0].toUpperCase() + name.slice(1);
-    return name;
+    return chooseRandom(this.names);
   }
 }

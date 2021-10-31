@@ -6,6 +6,6 @@ export class RecentYearBlock implements Block {
   type = BlockType.Number;
 
   generate(): string {
-    return getRandomInt(1900, 2022).toString();
+    return getRandomInt(1970, 2022).toString();
   }
 }
