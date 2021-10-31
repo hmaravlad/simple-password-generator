@@ -5,7 +5,7 @@ import { chooseRandom } from '../../utils/random-utils.js';
 export class SpecialSymbolBlock implements Block {
   type = BlockType.Text;
 
-  private specialSymbols = ['!', '?', '.', '$', '@', '%'];
+  private specialSymbols = ['!', '?', '$'];
 
   generate(): string {
     return chooseRandom(this.specialSymbols);
