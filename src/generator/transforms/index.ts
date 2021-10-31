@@ -9,10 +9,10 @@ import { Same } from './same.js';
 
 export class TransformGetter {
   textTransforms = [
-    { item: new Same(), p: 75 },
+    { item: new Same(), p: 65 },
     { item: new Repeat(), p: 6 },
     { item: new CapitalizeHalf(), p: 3 },
-    { item: new Capitalize(), p: 13 },
+    { item: new Capitalize(), p: 23 },
     { item: new Replace(), p: 3 },
   ];
 
