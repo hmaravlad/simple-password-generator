@@ -105,3 +105,6 @@ dist
 
 # plaintext passwords
 results/plaintext/*
+
+# dictionary
+dict.txt
