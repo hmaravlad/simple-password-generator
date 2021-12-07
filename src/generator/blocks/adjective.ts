@@ -2,8 +2,9 @@ import { Block } from '../../types/block.js';
 import { BlockType } from '../../types/block-type.js';
 import { chooseRandom } from '../../utils/random-utils.js';
 import { StrFileParser } from '../../utils/str-file-parser.js';
+import { Dict } from '../../types/dict.js';
 
-export class AdjectiveBlock implements Block {
+export class AdjectiveBlock implements Block, Dict {
   type = BlockType.Text;
 
   words: string[];
@@ -15,5 +16,9 @@ export class AdjectiveBlock implements Block {
 
   generate(): string {
     return chooseRandom(this.words);
+  }
+
+  getDict(): string[] {
+    return this.words;
   }
 }

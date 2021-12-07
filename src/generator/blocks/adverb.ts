@@ -4,23 +4,21 @@ import { chooseRandom } from '../../utils/random-utils.js';
 import { StrFileParser } from '../../utils/str-file-parser.js';
 import { Dict } from '../../types/dict.js';
 
-const NAME_NUMBER = 1000;
-
-export class NameBlock implements Block, Dict {
+export class AdverbBlock implements Block, Dict {
   type = BlockType.Text;
 
-  names: string[];
+  adverbs: string[];
 
   constructor() {
     const strFileParser = new StrFileParser();
-    this.names = strFileParser.parse('./src/resources/names.txt').slice(0, NAME_NUMBER);
+    this.adverbs = strFileParser.parse('./src/resources/adverbs.txt');
   }
 
   generate(): string {
-    return chooseRandom(this.names);
+    return chooseRandom(this.adverbs);
   }
 
   getDict(): string[] {
-    return this.names;
+    return this.adverbs;
   }
 }

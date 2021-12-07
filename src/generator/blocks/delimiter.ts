@@ -1,8 +1,9 @@
 import { Block } from '../../types/block.js';
 import { BlockType } from '../../types/block-type.js';
 import { chooseRandomByProb } from '../../utils/random-utils.js';
+import { Dict } from '../../types/dict.js';
 
-export class DelimiterBlock implements Block {
+export class DelimiterBlock implements Block, Dict {
   type = BlockType.Text;
 
   private delimiters = [
@@ -14,5 +15,9 @@ export class DelimiterBlock implements Block {
 
   generate(): string {
     return chooseRandomByProb(this.delimiters);
+  }
+
+  getDict(): string[] {
+    return this.delimiters.map(del => del.item);
   }
 }

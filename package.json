@@ -5,7 +5,8 @@
   "main": "main.ts",
   "scripts": {
     "start": "tsc; node dist/main.js",
-    "serve": "tsnd --respawn --no-notify --transpile-only src/main.ts"
+    "serve": "tsnd --respawn --no-notif --transpile-only src/main.ts",
+    "gen-dict": "tsc; node --max-old-space-size=4096 dist/dict-generator.js"
   },
   "repository": {
     "type": "git",
